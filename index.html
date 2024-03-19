@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href = "styles.css" rel = "stylesheet" type = "text/css">
+    <script src="https://kit.fontawesome.com/f0dba92867.js" crossorigin="anonymous"></script>
+  </head>  
+  <body>
+    <header>
+        <h1 class = "heading"> TODO tasks</h1>
+    </header>
+    <main>
+        <div class = "card add">
+            <div class = "textContainer">
+                <input type = "text" placeholder = "Create a New Task"/>
+            </div>
+            <div>
+                <button id = "addIcon">
+                    <i class="fa-solid fa-circle-plus"></i>
+                </button>
+            </div>
+        </div>
+        <ul id = "todos">
+
+        </ul>
+        <div class = "card results">
+            <p><span id = "itemsLeft">0</span> tasks left </p>
+            <div class = "filter">
+                <button id = "all" class = "active"> All </button>
+                <button id = "unComplete"> Uncomplete </button>
+                <button id = "completed"> Completed </button>
+            </div>
+            <div>
+                <button id = "clearCompleted"> Clear Completed </button>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src = "script.js"></script>
+  </body>
+</html>

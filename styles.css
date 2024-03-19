@@ -1,0 +1,167 @@
+.heading{
+    text-align: center;
+}
+
+body {
+    font-size: 18px;
+    font-weight: var(400);
+    font-family: "Josefin Sans", sans-serif;
+    min-height: 100vh;
+    margin: auto;
+    padding-top: 5rem;
+    width: min(85%, 30rem);
+    background-color: hsl(235, 21%, 11%);
+    background-image: url("./images/macbook_mouse.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    color: #c8cae1;
+}
+
+
+.card{
+    background-color: hsl(235, 21%, 11%);
+    border-top: 1px solid hsl(233, 14%, 35%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.3rem;
+    height: 3rem;
+}
+
+.add{
+    margin: 1rem 0;
+    border-radius: 0.3rem;
+}
+
+.add button i{
+    display: none;
+}
+
+.add:hover button i{
+    display: block;
+}
+ul{
+    list-style: none;
+}
+
+input, button{
+    color: #c8cae1;
+    background: transparent;
+    font: inherit;
+    border: 0;
+}
+
+input:focus, button:focus{
+    outline: 0;
+}
+
+.textContainer input{
+    width: 100%;
+    font-size: 18px;
+}
+.textContainer input::placeholder{
+    color: hsl(233, 14%, 35%);
+}
+
+#todos{
+    box-shadow: 0 2rem 3rem -0.5rem var(hsl(0, 0%, 0%, 0.1));
+    padding: 0;
+}
+
+
+
+#todos .card:first-child{
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+#todos .card:last-child{
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.todo,
+.icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.todoTask{
+    justify-content: space-between;
+}
+
+.fa-trash{
+    cursor:pointer;
+    margin-top: 0.3rem;
+    color: hsl(233, 14%, 35%);
+}
+
+.fa-trash:hover{
+    color: hsl(0, 98%, 61%);
+}
+
+.icons i{
+    display: none;
+}
+
+.todoTask:hover .icons i{
+    display: block;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] ~ label {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid hsl(233, 14%, 35%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="checkbox"] ~ label:hover {
+    border: 1px solid hsl(113, 87%, 65%);
+}
+
+input[type="checkbox"]:checked ~ label{
+    background: url(./images/check-solid.svg), linear-gradient(135deg, hsl(113, 100%, 67%) 0, hsl(261, 87%, 65%));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type="checkbox"]:checked ~ p{
+    text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
+}
+
+.results{
+    display: flex;
+    justify-content: space-between;
+    color: hsl(233, 14%, 35%);
+    height: 3rem;
+    border-radius: 0.3rem;
+    font-size: 13px
+}
+
+.results button{
+    cursor: pointer;
+    color: hsl(233, 14%, 35%);
+}
+
+.results .active{
+    color:hsl(220, 98%, 61%);
+}
+
+.filter{
+    display: none;
+    font-weight: 700;
+}
+
+@media (min-width: 480px){
+    .filter{
+        display: block;
+    }
+}
