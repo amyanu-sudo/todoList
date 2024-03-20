@@ -8,8 +8,8 @@ const completedButton = document.getElementById('completed');
 const clearCompletedButton = document.getElementById('clearCompleted');
 
 let todosTaskList = [];
-// let filteredTaskList = [];
 
+// function to update number of tasks to be completedButton.
 function updateTasksLeft(){
     const tasksLeft = todosTaskList.reduce((acc, obj)=>{
         if(obj.isCompleted === false){
@@ -25,6 +25,7 @@ function updateTasksLeft(){
     return tasksLeft;
 }
 
+// function to render the list item to the container in html
 function rendertodosTaskList(todosTaskList){
     todoContainer.innerHTML = "";
 
@@ -48,7 +49,7 @@ function rendertodosTaskList(todosTaskList){
     });
 }
 
-
+// function to create new task 
 function addTask(){
     if(inputField.value.trim() !== ""){
         const taskText = inputField.value;
@@ -69,6 +70,7 @@ function addTask(){
     }
 }
 
+// function to toggle the task to completed or uncomplete state 
 function toggleTaskCompletion(taskId){
     todosTaskList.forEach((task)=>{
         if(taskId === task.id)
@@ -81,6 +83,7 @@ function toggleTaskCompletion(taskId){
     updateTasksLeft();
 }
 
+// function to delete the task 
 function deleteTask(taskId){
     const updatedTaskList = todosTaskList.filter(item => item.id != taskId);
     todosTaskList = updatedTaskList;
@@ -88,6 +91,7 @@ function deleteTask(taskId){
     updateTasksLeft();
 }
 
+// function to filter the uncomplete tasks and render it in the container 
 function renderUnCompleteTasks(){
     const unCompleteTaskList = todosTaskList.filter((item)=>{
         return !item.isCompleted;
@@ -97,6 +101,8 @@ function renderUnCompleteTasks(){
     unCompleteButton.classList.add("active");
     completedButton.classList.remove("active");
 }
+
+// function to filter the completed tasks and render it in the container 
 
 function renderCompletedTasks(){
     const completedTaskList = todosTaskList.filter((item)=>{
@@ -108,6 +114,8 @@ function renderCompletedTasks(){
     completedButton.classList.add("active");
 }
 
+// function to delete all the completed tasks 
+
 function clearCompletedTasks(){
     const updatedTaskList = todosTaskList.filter(item => !item.isCompleted);
     todosTaskList = updatedTaskList;
@@ -115,6 +123,7 @@ function clearCompletedTasks(){
     updateTasksLeft();
 }
 
+// event listener for the input field to add new task
 inputField.addEventListener("keydown", (event)=>{
     if(event.key === "Enter" && inputField.value.trim() !== ""){
         addTask();
@@ -129,6 +138,7 @@ todoContainer.addEventListener('change', (event)=>{
     toggleTaskCompletion(taskId);
 });
 
+//event listener for delete button
 todoContainer.addEventListener("click", (event)=>{
     if(event.target.classList.contains("fa-trash")){
         const icon = event.target;

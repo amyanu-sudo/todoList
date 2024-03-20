@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <!-- below line displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Manoj | Todo app </title> 
     <link href = "styles.css" rel = "stylesheet" type = "text/css">
     <script src="https://kit.fontawesome.com/f0dba92867.js" crossorigin="anonymous"></script>
   </head>  
@@ -9,6 +13,7 @@
         <h1 class = "heading"> TODO tasks</h1>
     </header>
     <main>
+        <!-- container which displays input container and add icon -->
         <div class = "card add">
             <div class = "textContainer">
                 <input type = "text" placeholder = "Create a New Task"/>
@@ -19,9 +24,11 @@
                 </button>
             </div>
         </div>
+        <!-- container to add each todo task-->
         <ul id = "todos">
 
         </ul>
+        <!-- Container which displays the filters button list -->
         <div class = "card results">
             <p><span id = "itemsLeft">0</span> tasks left </p>
             <div class = "filter">
