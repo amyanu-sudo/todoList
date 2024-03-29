@@ -17,6 +17,7 @@ A simple To-Do List app built with HTML, CSS, and JavaScript.
 - You can filter tasks by status(All, Uncomplete, Completed).
 - You can also clear the completed tasks.
 - Responsive design for mobile and desktop.
+- List is not persistent.
 
 ## Demo
 
@@ -45,4 +46,3 @@ You can view a live demo of the app [here](https://amyanu-sudo.github.io/todoLis
 - Click on the checkbox to mark task as completed.
 - Hover over a task and click the delete icon to remove it from the list
 - Use the filter buttons to show all tasks, uncomplete tasks, completed tasks, or clear the completed tasks.
-- List is not persistent.
