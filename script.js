@@ -150,6 +150,7 @@ todoContainer.addEventListener("click", (event)=>{
     }
 })
 
+//event listeners for all the filter buttons respectively
 allButton.addEventListener('click', ()=>{
     rendertodosTaskList(todosTaskList);
     allButton.classList.add("active");
@@ -158,5 +159,7 @@ allButton.addEventListener('click', ()=>{
 });
 
 unCompleteButton.addEventListener('click', renderUnCompleteTasks);
+
 completedButton.addEventListener('click', renderCompletedTasks);
+
 clearCompletedButton.addEventListener('click', clearCompletedTasks);
