@@ -45,3 +45,4 @@ You can view a live demo of the app [here](https://amyanu-sudo.github.io/todoLis
 - Click on the checkbox to mark task as completed.
 - Hover over a task and click the delete icon to remove it from the list
 - Use the filter buttons to show all tasks, uncomplete tasks, completed tasks, or clear the completed tasks.
+- List is not persistent.
